@@ -1,15 +1,18 @@
 //--------Funksiya yazacaqsınız və bu funksiya parametr olaraq number qəbul edir. Əgər number cütdürsə, həmin number-i 2-yə bölürsünüz, təkdirsə 3-ə vurub üzərinə 1 gəlirsiniz. Bu prosesi həmin number 1 olana qədər təkrarlanır ( 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1)----------//
 
 const first=function(number){
+    let newarray=[];
     while(number !== 1){
-        return 1;
-    }
+     newarray.push(number);
     if(number%2==0){
-        return number/2;
+        number=number/2;
     }
     else{
-        return number*3+1;
+        number=number*3+1;
     }
+} 
+newarray.push(number);
+return newarray
 }
 console.log(first(3));
 
